@@ -12,7 +12,6 @@ end
 def display_card_total(cards)
   # code #display_card_total here
   puts "Your cards add up to #{cards}"
-  return cards
 end
 
 def prompt_user
@@ -33,21 +32,24 @@ end
 
 def initial_round
   # code #initial_round here
-  cards=deal_card
+  card=deal_card
+  cards=0
   2.times do
-    cards+=cards
+    card
+    cards+=card
   end
   display_card_total(cards)
+  return cards
 end
 
-def hit?(cards)
+def hit? (cards)
   # code hit? here
   prompt_user
   call=get_user_input
   if call=="h"
     cards=deal_card
   elsif call=="s"
-    break
+    end_game
   else
     invalid_command
   end
@@ -67,7 +69,7 @@ def runner
   cards = initial_round
   until cards>21 do
     cards=hit?(cards)
-    display_card_total(cards)
+    display_card_total
   end
   end_game 
 end

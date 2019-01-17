@@ -46,7 +46,7 @@ def hit? (cards)
   if call=="h"
     cards+=deal_card
   elsif call=="s"
-    end_game
+    cards
   else
     invalid_command
   end

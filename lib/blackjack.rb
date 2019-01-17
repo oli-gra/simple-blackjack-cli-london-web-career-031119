@@ -44,7 +44,7 @@ def hit? (cards)
   prompt_user
   call=get_user_input
   if call=="h"
-    cards=deal_card
+    cards+=deal_card
   elsif call=="s"
     end_game
   else

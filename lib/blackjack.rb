@@ -55,12 +55,6 @@ end
 def invalid_command
   # code invalid_command here
     welcome
-  cards = initial_round
-  until cards>21 do
-    cards=hit?(cards)
-    display_card_total
-  end
-  end_game 
 end
 
 #####################################################
@@ -69,5 +63,10 @@ end
 
 def runner
   # code runner here
-
+  cards = initial_round
+  until cards>21
+    cards=hit?(cards)
+    display_card_total(cards)
+  end
+  end_game 
 end

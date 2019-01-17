@@ -32,11 +32,8 @@ end
 
 def initial_round
   # code #initial_round here
-  card=deal_card
-  cards=0
   2.times do
-    card
-    cards+=card
+    deal_card
   end
   display_card_total(cards)
   return cards
